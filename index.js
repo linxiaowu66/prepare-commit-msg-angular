@@ -68,7 +68,7 @@ function getContentWithDoc() {
 }
 
 var content = fs.readFileSync(commitMsgFile).toString();
-content = getPrefilledMessage() + getMaxCharsLine() + getContentWithDoc();
+content = /*getPrefilledMessage() + */getMaxCharsLine() + getContentWithDoc();
 
 fs.writeFileSync(commitMsgFile, content);
 process.exit(0);
